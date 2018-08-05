@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BBF872C211700A800FD75CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872A211700A700FD75CB /* ViewController.swift */; };
-		3BBF872D211700A800FD75CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872B211700A700FD75CB /* SignupViewController.swift */; };
 		3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872E211700BA00FD75CB /* AppDelegate.swift */; };
+		3BBF87332117013B00FD75CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF87312117013B00FD75CB /* SignupViewController.swift */; };
+		3BBF87342117013B00FD75CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF87322117013B00FD75CB /* ViewController.swift */; };
 		3BE177F82110FFC1003ADE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177F62110FFC1003ADE49 /* Main.storyboard */; };
 		3BE177FB2110FFC1003ADE49 /* SportMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BE177F92110FFC1003ADE49 /* SportMe.xcdatamodeld */; };
 		3BE177FD2110FFC3003ADE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177FC2110FFC3003ADE49 /* Assets.xcassets */; };
@@ -41,9 +41,9 @@
 /* Begin PBXFileReference section */
 		06CD1D9FD1FF90E1A3C7A03A /* Pods-SportMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMeTests/Pods-SportMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BBF872A211700A700FD75CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = SportMe/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
-		3BBF872B211700A700FD75CB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = SportMe/Controller/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
 		3BBF872E211700BA00FD75CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BBF87312117013B00FD75CB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		3BBF87322117013B00FD75CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BE177EF2110FFC1003ADE49 /* SportMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE177F72110FFC1003ADE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BE177FA2110FFC1003ADE49 /* SportMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportMe.xcdatamodel; sourceTree = "<group>"; };
@@ -102,21 +102,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3B7F198B21145FA000D999FB /* Controller  */ = {
-			isa = PBXGroup;
-			children = (
-				3BBF872B211700A700FD75CB /* SignupViewController.swift */,
-				3BBF872A211700A700FD75CB /* ViewController.swift */,
-			);
-			path = "Controller ";
-			sourceTree = "<group>";
-		};
 		3B7F198D21145FEB00D999FB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3BE177F62110FFC1003ADE49 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3BBF87302117013B00FD75CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BBF87312117013B00FD75CB /* SignupViewController.swift */,
+				3BBF87322117013B00FD75CB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3BE177E62110FFC1003ADE49 = {
@@ -144,9 +144,9 @@
 		3BE177F12110FFC1003ADE49 /* SportMe */ = {
 			isa = PBXGroup;
 			children = (
-				3BBF872E211700BA00FD75CB /* AppDelegate.swift */,
 				3B7F198D21145FEB00D999FB /* View */,
-				3B7F198B21145FA000D999FB /* Controller  */,
+				3BBF87302117013B00FD75CB /* Controller */,
+				3BBF872E211700BA00FD75CB /* AppDelegate.swift */,
 				3BE177FC2110FFC3003ADE49 /* Assets.xcassets */,
 				3BE177FE2110FFC3003ADE49 /* LaunchScreen.storyboard */,
 				3BE178012110FFC3003ADE49 /* Info.plist */,
@@ -357,9 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBF87332117013B00FD75CB /* SignupViewController.swift in Sources */,
 				3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */,
-				3BBF872D211700A800FD75CB /* SignupViewController.swift in Sources */,
-				3BBF872C211700A800FD75CB /* ViewController.swift in Sources */,
+				3BBF87342117013B00FD75CB /* ViewController.swift in Sources */,
 				3BE177FB2110FFC1003ADE49 /* SportMe.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
