@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BE177F32110FFC1003ADE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE177F22110FFC1003ADE49 /* AppDelegate.swift */; };
-		3BE177F52110FFC1003ADE49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE177F42110FFC1003ADE49 /* ViewController.swift */; };
+		3BBF872C211700A800FD75CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872A211700A700FD75CB /* ViewController.swift */; };
+		3BBF872D211700A800FD75CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872B211700A700FD75CB /* SignupViewController.swift */; };
+		3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872E211700BA00FD75CB /* AppDelegate.swift */; };
 		3BE177F82110FFC1003ADE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177F62110FFC1003ADE49 /* Main.storyboard */; };
 		3BE177FB2110FFC1003ADE49 /* SportMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BE177F92110FFC1003ADE49 /* SportMe.xcdatamodeld */; };
 		3BE177FD2110FFC3003ADE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177FC2110FFC3003ADE49 /* Assets.xcassets */; };
@@ -16,8 +17,8 @@
 		3BE1780B2110FFC3003ADE49 /* SportMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1780A2110FFC3003ADE49 /* SportMeTests.swift */; };
 		3BE178162110FFC3003ADE49 /* SportMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE178152110FFC3003ADE49 /* SportMeUITests.swift */; };
 		3BE1782821117E38003ADE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1782721117E38003ADE49 /* GoogleService-Info.plist */; };
-		572B9C5728699C24094F847C /* Pods_SportMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FE25C73AE12629E75183A4 /* Pods_SportMe.framework */; };
-		CA887DFB881A01F65DA73122 /* Pods_SportMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC74A08835E577DA9C46CF2F /* Pods_SportMeTests.framework */; };
+		AD06530C155F982B69F6962C /* libPods-SportMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */; };
+		F516216B9B7D274A5E4ABEC8 /* libPods-SportMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +40,11 @@
 
 /* Begin PBXFileReference section */
 		06CD1D9FD1FF90E1A3C7A03A /* Pods-SportMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMeTests/Pods-SportMeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		26FE25C73AE12629E75183A4 /* Pods_SportMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BBF872A211700A700FD75CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = SportMe/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		3BBF872B211700A700FD75CB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = SportMe/Controller/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
+		3BBF872E211700BA00FD75CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE177EF2110FFC1003ADE49 /* SportMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BE177F22110FFC1003ADE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BE177F42110FFC1003ADE49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BE177F72110FFC1003ADE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BE177FA2110FFC1003ADE49 /* SportMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportMe.xcdatamodel; sourceTree = "<group>"; };
 		3BE177FC2110FFC3003ADE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		3BE1782721117E38003ADE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76074A4F9551AEE1891FC0B0 /* Pods-SportMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.release.xcconfig"; sourceTree = "<group>"; };
 		8D0437C471597568F6FA3A7C /* Pods-SportMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.debug.xcconfig"; sourceTree = "<group>"; };
-		AC74A08835E577DA9C46CF2F /* Pods_SportMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0F2866EC83C172BFB22519 /* Pods-SportMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportMeTests/Pods-SportMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8E795AF25C1E92F313DE529 /* Pods_SportMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572B9C5728699C24094F847C /* Pods_SportMe.framework in Frameworks */,
+				F516216B9B7D274A5E4ABEC8 /* libPods-SportMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA887DFB881A01F65DA73122 /* Pods_SportMeTests.framework in Frameworks */,
+				AD06530C155F982B69F6962C /* libPods-SportMeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +100,23 @@
 				AD0F2866EC83C172BFB22519 /* Pods-SportMeTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B7F198B21145FA000D999FB /* Controller  */ = {
+			isa = PBXGroup;
+			children = (
+				3BBF872B211700A700FD75CB /* SignupViewController.swift */,
+				3BBF872A211700A700FD75CB /* ViewController.swift */,
+			);
+			path = "Controller ";
+			sourceTree = "<group>";
+		};
+		3B7F198D21145FEB00D999FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BE177F62110FFC1003ADE49 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3BE177E62110FFC1003ADE49 = {
@@ -125,9 +144,9 @@
 		3BE177F12110FFC1003ADE49 /* SportMe */ = {
 			isa = PBXGroup;
 			children = (
-				3BE177F22110FFC1003ADE49 /* AppDelegate.swift */,
-				3BE177F42110FFC1003ADE49 /* ViewController.swift */,
-				3BE177F62110FFC1003ADE49 /* Main.storyboard */,
+				3BBF872E211700BA00FD75CB /* AppDelegate.swift */,
+				3B7F198D21145FEB00D999FB /* View */,
+				3B7F198B21145FA000D999FB /* Controller  */,
 				3BE177FC2110FFC3003ADE49 /* Assets.xcassets */,
 				3BE177FE2110FFC3003ADE49 /* LaunchScreen.storyboard */,
 				3BE178012110FFC3003ADE49 /* Info.plist */,
@@ -158,9 +177,9 @@
 		C895385D3CF6527897A8A4FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				26FE25C73AE12629E75183A4 /* Pods_SportMe.framework */,
-				AC74A08835E577DA9C46CF2F /* Pods_SportMeTests.framework */,
 				E8E795AF25C1E92F313DE529 /* Pods_SportMeUITests.framework */,
+				9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */,
+				11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,8 +195,6 @@
 				3BE177EB2110FFC1003ADE49 /* Sources */,
 				3BE177EC2110FFC1003ADE49 /* Frameworks */,
 				3BE177ED2110FFC1003ADE49 /* Resources */,
-				F0FDB6C6F95D73888C7ECFF7 /* [CP] Embed Pods Frameworks */,
-				1E24182891BC91D3AAC77F02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,36 +314,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E24182891BC91D3AAC77F02 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		645EA200C192FDC862BC53A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,56 +350,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F0FDB6C6F95D73888C7ECFF7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -420,9 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE177F52110FFC1003ADE49 /* ViewController.swift in Sources */,
+				3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */,
+				3BBF872D211700A800FD75CB /* SignupViewController.swift in Sources */,
+				3BBF872C211700A800FD75CB /* ViewController.swift in Sources */,
 				3BE177FB2110FFC1003ADE49 /* SportMe.xcdatamodeld in Sources */,
-				3BE177F32110FFC1003ADE49 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

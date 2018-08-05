@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FirebaseUI
 
 //Configurate Firebase UI to use the sign-in methods I want to support
 
@@ -22,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        let authUI = FUIAuth.defaultAuthUI()
-        // You need to adopt a FUIAuthDelegate protocol to receive callback
-        authUI?.delegate = self as? FUIAuthDelegate
+        
+        let myDatabase = Database.database().reference()
+        myDatabase.setValue("We've got data!")
+    
         return true
     }
 
