@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuth 
 
 //Configurate Firebase UI to use the sign-in methods I want to support
 

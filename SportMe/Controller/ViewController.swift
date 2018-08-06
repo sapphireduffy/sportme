@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class ViewController: UIViewController {
     //Outlet Buttons
@@ -15,6 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
     }
 
@@ -31,7 +34,18 @@ class ViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: Any) {
         print(" *!*!*!* Login tapped *!*!*!*")
-    }
-    
-}
 
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            if error != nil {
+                print(error!)
+            }
+            else {
+                print("login successful")
+            }
+        })
+
+}
+        
+        
+
+}

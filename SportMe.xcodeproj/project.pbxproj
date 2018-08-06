@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B56D72021185E0B006CD7C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B56D71F21185E0B006CD7C4 /* GoogleService-Info.plist */; };
 		3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF872E211700BA00FD75CB /* AppDelegate.swift */; };
 		3BBF87332117013B00FD75CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF87312117013B00FD75CB /* SignupViewController.swift */; };
 		3BBF87342117013B00FD75CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF87322117013B00FD75CB /* ViewController.swift */; };
@@ -16,9 +17,8 @@
 		3BE178002110FFC3003ADE49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177FE2110FFC3003ADE49 /* LaunchScreen.storyboard */; };
 		3BE1780B2110FFC3003ADE49 /* SportMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1780A2110FFC3003ADE49 /* SportMeTests.swift */; };
 		3BE178162110FFC3003ADE49 /* SportMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE178152110FFC3003ADE49 /* SportMeUITests.swift */; };
-		3BE1782821117E38003ADE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1782721117E38003ADE49 /* GoogleService-Info.plist */; };
-		AD06530C155F982B69F6962C /* libPods-SportMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */; };
-		F516216B9B7D274A5E4ABEC8 /* libPods-SportMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */; };
+		533A937F16A68154A09F193A /* Pods_SportMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBCB0A00FE87921FE9BE13D /* Pods_SportMe.framework */; };
+		CE57B0084040C4F00C7B3DDB /* Pods_SportMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8EC91D7132EFCA3DBC9306 /* Pods_SportMeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		06CD1D9FD1FF90E1A3C7A03A /* Pods-SportMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMeTests/Pods-SportMeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B56D71F21185E0B006CD7C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BBF872E211700BA00FD75CB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBF87312117013B00FD75CB /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3BBF87322117013B00FD75CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +56,10 @@
 		3BE178112110FFC3003ADE49 /* SportMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE178152110FFC3003ADE49 /* SportMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportMeUITests.swift; sourceTree = "<group>"; };
 		3BE178172110FFC3003ADE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BE1782721117E38003ADE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76074A4F9551AEE1891FC0B0 /* Pods-SportMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.release.xcconfig"; sourceTree = "<group>"; };
+		7E8EC91D7132EFCA3DBC9306 /* Pods_SportMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0437C471597568F6FA3A7C /* Pods-SportMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.debug.xcconfig"; sourceTree = "<group>"; };
-		9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BBCB0A00FE87921FE9BE13D /* Pods_SportMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0F2866EC83C172BFB22519 /* Pods-SportMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportMeTests/Pods-SportMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8E795AF25C1E92F313DE529 /* Pods_SportMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F516216B9B7D274A5E4ABEC8 /* libPods-SportMe.a in Frameworks */,
+				533A937F16A68154A09F193A /* Pods_SportMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD06530C155F982B69F6962C /* libPods-SportMeTests.a in Frameworks */,
+				CE57B0084040C4F00C7B3DDB /* Pods_SportMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 				3BE177FE2110FFC3003ADE49 /* LaunchScreen.storyboard */,
 				3BE178012110FFC3003ADE49 /* Info.plist */,
 				3BE177F92110FFC1003ADE49 /* SportMe.xcdatamodeld */,
-				3BE1782721117E38003ADE49 /* GoogleService-Info.plist */,
+				3B56D71F21185E0B006CD7C4 /* GoogleService-Info.plist */,
 			);
 			path = SportMe;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				E8E795AF25C1E92F313DE529 /* Pods_SportMeUITests.framework */,
-				9694DE77E054A1C8CC7B390B /* libPods-SportMe.a */,
-				11B25FBBAB7F4CE9F03EAACD /* libPods-SportMeTests.a */,
+				9BBCB0A00FE87921FE9BE13D /* Pods_SportMe.framework */,
+				7E8EC91D7132EFCA3DBC9306 /* Pods_SportMeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +195,7 @@
 				3BE177EB2110FFC1003ADE49 /* Sources */,
 				3BE177EC2110FFC1003ADE49 /* Frameworks */,
 				3BE177ED2110FFC1003ADE49 /* Resources */,
+				7198EF19A8D13655D21F7BDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE178002110FFC3003ADE49 /* LaunchScreen.storyboard in Resources */,
-				3BE1782821117E38003ADE49 /* GoogleService-Info.plist in Resources */,
+				3B56D72021185E0B006CD7C4 /* GoogleService-Info.plist in Resources */,
 				3BE177FD2110FFC3003ADE49 /* Assets.xcassets in Resources */,
 				3BE177F82110FFC1003ADE49 /* Main.storyboard in Resources */,
 			);
@@ -330,6 +331,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7198EF19A8D13655D21F7BDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SportMe/Pods-SportMe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D374B721FFB3C6DAA08BE89 /* [CP] Check Pods Manifest.lock */ = {
