@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="loginSignupID" id="BYZ-38-t0r" customClass="ViewController" customModule="SportMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginSignupID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SportMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P3S-Ir-3VE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AC5-jS-evT"/>
                             <constraint firstItem="AKh-4W-BHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Dqw-GR-nK7"/>
@@ -75,6 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5BQ-zR-5Wx"/>
                     <connections>
                         <outlet property="emailTextField" destination="AKh-4W-BHf" id="A0n-Y6-uT0"/>
                         <outlet property="passwordTextField" destination="P3S-Ir-3VE" id="ed3-aY-o0j"/>
@@ -82,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-286" y="132"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="iM8-o0-Efq">

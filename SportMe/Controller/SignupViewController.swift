@@ -24,27 +24,47 @@ class SignupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func registerBtnPressed(_ sender: Any) {
-
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            var alertTitle = String()
+            var alertMessage = String()
+            var alertActionTitle = String()
+            var completionHandler: (UIAlertAction) -> Void
             
             if error != nil {
-                print(error!)
+                alertTitle = "Error"
+                alertMessage = "Invalid Email or Password. Please try again."
+                alertActionTitle = "Try Again"
+                 // This action to dismiss and re-show the signup page
+                completionHandler = { alertAction in
+                }
+               
             }
             else {
-                print ("Registration successful")
+                alertTitle = "Registration Successful"
+                alertMessage = "You may now login. Thank You!"
+                alertActionTitle = "OK"
+                completionHandler = { _ in
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "loginSignupID")
+                    self.present(controller, animated: true, completion: nil)
+                }
+                
             }
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: alertActionTitle, style: .default, handler: completionHandler))
+            self.present(alert, animated: true, completion: nil)
         })
-        
-        
+    
         
     }
-    
     
 }

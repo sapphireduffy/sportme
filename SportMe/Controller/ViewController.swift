@@ -35,12 +35,17 @@ class ViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         print(" *!*!*!* Login tapped *!*!*!*")
 
+        // Force unwrapping issues here;
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             if error != nil {
+                
+                
+                
                 print(error!)
             }
             else {
                 print("login successful")
+                
             }
         })
 
