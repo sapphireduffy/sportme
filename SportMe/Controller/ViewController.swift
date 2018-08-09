@@ -36,8 +36,17 @@ class ViewController: UIViewController {
         print(" *!*!*!* Login tapped *!*!*!*")
 
         // Force unwrapping issues here;
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:
+            { (user, error) in
+                var alertTitle = String()
+                var alertMessage = String()
+                var alertActionTitle = String()
+
+            
             if error != nil {
+                alertTitle = "Error"
+                alertMessage = "Login failed, please enter a valid email address and password"
+                alertActionTitle = "OK"
                 
                 
                 
@@ -47,6 +56,10 @@ class ViewController: UIViewController {
                 print("login successful")
                 
             }
+                
+                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: alertActionTitle, style: .default))
+                self.present(alert, animated: true, completion: nil)
         })
 
 }
