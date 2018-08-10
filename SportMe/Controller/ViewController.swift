@@ -37,16 +37,31 @@ class ViewController: UIViewController {
 
         // Force unwrapping issues here;
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            var alertTitle = String()
+            var alertMessage = String()
+            var alertActionTitle = String()
             if error != nil {
+            alertTitle = "Error"
+            alertMessage = "Invalid Email or Password. Please try again."
+            alertActionTitle = "Try Again"
                 
                 
                 
                 print(error!)
             }
             else {
+                
+                
                 print("login successful")
                 
+                //Segue to ActivityFeed
+                self.performSegue(withIdentifier: "activityfeedID", sender: self)
+                
             }
+            
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: alertActionTitle, style: .default))
+            self.present(alert, animated: true, completion: nil)
         })
 
 }
