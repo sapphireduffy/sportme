@@ -12,24 +12,18 @@ struct Sport {
     
     var activityType: String
     var activityID : Int
-    var activityDate: Date
     var activityLocation: String
     var activityOrganiser: String
     var activityPostedTime: String
     
 }
 
-fileprivate func parseDate(_ str : String) -> Date {
-    let dateFormat = DateFormatter()
-    dateFormat.dateFormat = "dd-MM-yyyy"
-    return dateFormat.date(from: str)!
-    
 class ActivityFeedTableViewController: UITableViewController {
     
     var sports = [
-        Sport(activityType: "Football", activityID: 1, activityDate: parseDate("15-10-2018") , activityLocation: "Antrim", activityOrganiser: "Sapphire Duffy", activityPostedTime: "14:24"),
-        Sport(activityType: "American Football", activityID: 2, activityDate: parseDate("01-10-2018"), activityLocation: "Belfast", activityOrganiser: "Ryan Beckett", activityPostedTime: "13:25"),
-        Sport(activityType: "Tennis", activityID: 3, activityDate: parseDate("04-10-2018"), activityLocation: "Belfast", activityOrganiser: "Leno Beckett", activityPostedTime: "13:25")
+        Sport(activityType: "Football", activityID: 1, activityLocation: "Antrim", activityOrganiser: "Sapphire Duffy", activityPostedTime: "14:24"),
+        Sport(activityType: "American Football", activityID: 2, activityLocation: "Belfast", activityOrganiser: "Ryan Beckett", activityPostedTime: "13:25"),
+        Sport(activityType: "Tennis", activityID: 3, activityLocation: "Belfast", activityOrganiser: "Leno Beckett", activityPostedTime: "13:25")
     ]
     
     override func viewDidLoad() {
@@ -115,5 +109,4 @@ class ActivityFeedTableViewController: UITableViewController {
     }
     */
 
-}
 }

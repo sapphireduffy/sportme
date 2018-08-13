@@ -55,7 +55,7 @@ class ViewController: UIViewController {
                 print("login successful")
                 
                 //Segue to ActivityFeed
-                self.performSegue(withIdentifier: "activityfeedID", sender: self)
+                self.performSegue(withIdentifier: "goToActivityFeed", sender: self)
                 
             }
             
