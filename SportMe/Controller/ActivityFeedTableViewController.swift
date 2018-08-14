@@ -9,25 +9,25 @@
 import UIKit
 
 struct Sport {
-    
     var activityType: String
     var activityID : Int
     var activityLocation: String
     var activityOrganiser: String
     var activityPostedTime: String
-    
+    var numberOfPeople: Int
 }
 
 class ActivityFeedTableViewController: UITableViewController {
     
     var sports = [
-        Sport(activityType: "Football", activityID: 1, activityLocation: "Antrim", activityOrganiser: "Sapphire Duffy", activityPostedTime: "14:24"),
-        Sport(activityType: "American Football", activityID: 2, activityLocation: "Belfast", activityOrganiser: "Ryan Beckett", activityPostedTime: "13:25"),
-        Sport(activityType: "Tennis", activityID: 3, activityLocation: "Belfast", activityOrganiser: "Leno Beckett", activityPostedTime: "13:25")
+        Sport(activityType: "Football", activityID: 1, activityLocation: "Antrim", activityOrganiser: "Sapphire Duffy", activityPostedTime: "14:24", numberOfPeople: 10),
+        Sport(activityType: "American Football", activityID: 2, activityLocation: "Belfast", activityOrganiser: "Ryan Beckett", activityPostedTime: "13:25", numberOfPeople: 20),
+        Sport(activityType: "Tennis", activityID: 3, activityLocation: "Belfast", activityOrganiser: "Leno Beckett", activityPostedTime: "13:25", numberOfPeople: 1)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,7 +35,10 @@ class ActivityFeedTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @IBAction func addEvent(_ sender: UIBarButtonItem) {
+    self.performSegue(withIdentifier: "goToAddEvent", sender: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -108,5 +111,7 @@ class ActivityFeedTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
