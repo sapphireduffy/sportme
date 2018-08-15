@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportMe/Controller/SignupViewController.swift"
-            timestampString = "555498497.167287"
+            timestampString = "556034498.225385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "registerBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>

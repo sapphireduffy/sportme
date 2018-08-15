@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
     //Outlet Buttons
@@ -17,53 +18,41 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+    
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     //Action Buttons
     @IBAction func signupAccountTapped(_ sender: Any) {
-        print(" *!*!*!**** Signup tapped *!*!*!*")
+        print(" *!*!*!**** Signup tapped *!*!*!*") // TODO: Remove this
         performSegue(withIdentifier: "goToSignup", sender: self)
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        print(" *!*!*!* Login tapped *!*!*!*")
-
+        print(" *!*!*!* Login tapped *!*!*!*") // TODO: Remove this
         // Force unwrapping issues here;
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:
-            { (user, error) in
-                var alertTitle = String()
-                var alertMessage = String()
-                var alertActionTitle = String()
-
-            
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+            var alertTitle = String()
+            var alertMessage = String()
+            var alertActionTitle = String()
             if error != nil {
                 alertTitle = "Error"
-                alertMessage = "Login failed, please enter a valid email address and password"
-                alertActionTitle = "OK"
-                
-                
-                
+                alertMessage = "Invalid Email or Password. Please try again."
+                alertActionTitle = "Try Again"
                 print(error!)
-            }
-            else {
+            } else {
                 print("login successful")
-                
+                //Segue to ActivityFeed
+                self.performSegue(withIdentifier: "goToActivityFeed", sender: self)
             }
-                
-                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: alertActionTitle, style: .default))
-                self.present(alert, animated: true, completion: nil)
+            
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: alertActionTitle, style: .default))
+            self.present(alert, animated: true, completion: nil)
         })
-
-}
-        
-        
-
+    }
 }

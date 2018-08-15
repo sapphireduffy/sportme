@@ -33,6 +33,7 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func registerBtnPressed(_ sender: Any) {
+        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
             var alertTitle = String()
             var alertMessage = String()
@@ -60,6 +61,7 @@ class SignupViewController: UIViewController {
                 
             }
             let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            
             alert.addAction(UIAlertAction(title: alertActionTitle, style: .default, handler: completionHandler))
             self.present(alert, animated: true, completion: nil)
         })
