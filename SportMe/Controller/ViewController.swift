@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
     //Outlet Buttons
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
     
     override func didReceiveMemoryWarning() {

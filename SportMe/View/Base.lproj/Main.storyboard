@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjw-yg-K1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="133"/>
+            <point key="canvasLocation" x="968.79999999999995" y="132.26600985221674"/>
         </scene>
         <!--Activity Feed Table View Controller-->
         <scene sceneID="7mI-r3-f5A">
@@ -274,10 +274,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iid-Y7-W1U">
+                                <rect key="frame" x="152" y="719" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Event">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addActivity:" destination="cuP-GW-TDM" eventType="touchUpInside" id="ssV-UO-G1L"/>
+                                    <segue destination="wzY-G8-F4a" kind="show" identifier="goToActivityFeed" id="YvE-DL-xVm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g Football " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BF9-5X-9XZ">
+                                <rect key="frame" x="36" y="161" width="307" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ba0-Km-ugC"/>
                     </view>
+                    <connections>
+                        <outlet property="activityType" destination="BF9-5X-9XZ" id="5aC-nf-hIC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="za7-bC-435" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,4 +308,7 @@
     <resources>
         <image name="createEvent" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YvE-DL-xVm"/>
+    </inferredMetricsTieBreakers>
 </document>

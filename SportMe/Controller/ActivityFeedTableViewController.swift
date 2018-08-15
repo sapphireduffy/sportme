@@ -7,33 +7,59 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
-struct Sport {
-    var activityType: String
-    var activityID : Int
-    var activityLocation: String
-    var activityOrganiser: String
-    var activityPostedTime: String
-    var numberOfPeople: Int
-}
+var ref:DatabaseReference?
+var databaseHandle:DatabaseHandle?
+
 
 class ActivityFeedTableViewController: UITableViewController {
+
+var ref: DatabaseReference!
+var databaseHandle:DatabaseHandle?
     
-    var sports = [
-        Sport(activityType: "Football", activityID: 1, activityLocation: "Antrim", activityOrganiser: "Sapphire Duffy", activityPostedTime: "14:24", numberOfPeople: 10),
-        Sport(activityType: "American Football", activityID: 2, activityLocation: "Belfast", activityOrganiser: "Ryan Beckett", activityPostedTime: "13:25", numberOfPeople: 20),
-        Sport(activityType: "Tennis", activityID: 3, activityLocation: "Belfast", activityOrganiser: "Leno Beckett", activityPostedTime: "13:25", numberOfPeople: 1)
-    ]
+var activityType = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        fetchResultFromFirebase()
         
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //Retrieve posts and listen for changes
+        
+    }
+    
+    func fetchResultFromFirebase() {
+        //Set Firebase Reference
+        ref = Database.database().reference()
+        
+        //Retrieve the posts and listen for changes - Observe Activities and Child Added
+        databaseHandle = ref?.child("Activities").observe(.childAdded, with: { (snapshot) in
+            
+            //Code to execure child is added in table
+            //Take Value from the snapshot and add it to the post data array
+            
+            //Try to convert the  value of the data to a string
+            let activity = snapshot.value as! String?
+            
+            if let actualActivity = activity {
+                //Append Data to our activityType Array
+                self.activityType.append(actualActivity)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                }
+            }
+            
+        })
     }
     @IBAction func addEvent(_ sender: UIBarButtonItem) {
     self.performSegue(withIdentifier: "goToAddEvent", sender: self)
@@ -53,7 +79,7 @@ class ActivityFeedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sports.count
+        return activityType.count
     }
 
     
@@ -61,7 +87,7 @@ class ActivityFeedTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = self.sports[indexPath.row].activityType
+        cell.textLabel?.text = activityType[indexPath.row]
 
         return cell
     }
@@ -105,7 +131,7 @@ class ActivityFeedTableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard- application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

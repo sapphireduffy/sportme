@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CreateEventViewController: UIViewController {
+    
+    @IBOutlet weak var activityType: UITextField!
+    
+    var ref:DatabaseReference?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +29,13 @@ class CreateEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addActivity(_ sender: Any) {
+        
+        ref?.child("Activities").childByAutoId().setValue(activityType.text)
+        
+        self.performSegue(withIdentifier: "goToActivityFeed", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +45,11 @@ class CreateEventViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //TODO - Post Data to Firebase
 
 }
+
+
+
+//TODO Connect buttons
