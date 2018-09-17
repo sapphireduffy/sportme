@@ -12,42 +12,37 @@ import FirebaseDatabase
 var ref:DatabaseReference?
 var databaseHandle:DatabaseHandle?
 
-
 class ActivityFeedTableViewController: UITableViewController {
-
-var ref: DatabaseReference!
-var databaseHandle:DatabaseHandle?
     
-var activityType = [String]()
+    var activityType = [String]()
+    var myIndex = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        fetchResultFromFirebase()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        //Retrieve posts and listen for changes
+      //  tableView.delegate = self
         
-    }
-    
-    func fetchResultFromFirebase() {
-        //Set Firebase Reference
         ref = Database.database().reference()
         
-        //Retrieve the posts and listen for changes - Observe Activities and Child Added
-        databaseHandle = ref?.child("Activities").observe(.childAdded, with: { (snapshot) in
+        databaseHandle = ref?.child("Activities").observe(.value, with: {(snapshot) in
+    
+        if let result = snapshot.children.allObjects as? [DataSnapshot] {
             
+            for child in result {
+                
+                let activityID = child.key as String //get autoID
+        
+        //Retrieve the posts and listen for changes - Observe Activities and Child Added
+        databaseHandle = ref?.child("Activities/\(activityID)/Activity").observe(.value, with: { (snapshot) in
+            
+
+                    
             //Code to execure child is added in table
             //Take Value from the snapshot and add it to the post data array
-            
             //Try to convert the  value of the data to a string
-            let activity = snapshot.value as! String?
+            let activity = snapshot.value as? String
             
             if let actualActivity = activity {
                 //Append Data to our activityType Array
@@ -58,9 +53,26 @@ var activityType = [String]()
                     
                 }
             }
-            
+                })
+            }
+            }
         })
     }
+        //fetchResultFromFirebase()
+                    
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //Retrieve posts and listen for changes
+
+                    
+                    
+                    
+ //   func fetchResultFromFirebase() {
+        //Set Firebase Reference
+    
     @IBAction func addEvent(_ sender: UIBarButtonItem) {
     self.performSegue(withIdentifier: "goToAddEvent", sender: self)
     }
@@ -90,6 +102,12 @@ var activityType = [String]()
         cell.textLabel?.text = activityType[indexPath.row]
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "showActivity", sender: self)
+        
     }
 
 
