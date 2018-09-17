@@ -21,6 +21,11 @@
 		3BE178002110FFC3003ADE49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE177FE2110FFC3003ADE49 /* LaunchScreen.storyboard */; };
 		3BE1780B2110FFC3003ADE49 /* SportMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1780A2110FFC3003ADE49 /* SportMeTests.swift */; };
 		3BE178162110FFC3003ADE49 /* SportMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE178152110FFC3003ADE49 /* SportMeUITests.swift */; };
+		3BEF3ABC215049B90090D06B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF3ABB215049B90090D06B /* Activity.swift */; };
+		3BEF3ABF21504BB70090D06B /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF3ABD21504BB70090D06B /* ActivityDetailViewController.swift */; };
+		3BEF3AC021504BB70090D06B /* ActivityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF3ABE21504BB70090D06B /* ActivityDetailViewController.xib */; };
+		3BEF3AC6215061610090D06B /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF3AC4215061610090D06B /* ActivityTableViewCell.swift */; };
+		3BEF3AC7215061610090D06B /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEF3AC5215061610090D06B /* ActivityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		3BE178112110FFC3003ADE49 /* SportMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE178152110FFC3003ADE49 /* SportMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportMeUITests.swift; sourceTree = "<group>"; };
 		3BE178172110FFC3003ADE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEF3ABB215049B90090D06B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		3BEF3ABD21504BB70090D06B /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		3BEF3ABE21504BB70090D06B /* ActivityDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailViewController.xib; sourceTree = "<group>"; };
+		3BEF3AC4215061610090D06B /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		3BEF3AC5215061610090D06B /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		4E24B99E6C912708CCA1E200 /* Pods-SportMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.release.xcconfig"; sourceTree = "<group>"; };
 		C1AE248FC8979410472C26EC /* Pods-SportMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportMe/Pods-SportMe.debug.xcconfig"; sourceTree = "<group>"; };
 		CC4FB87A0B4662C943C813C2 /* Pods_SportMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				3BE177F62110FFC1003ADE49 /* Main.storyboard */,
+				3BEF3ABE21504BB70090D06B /* ActivityDetailViewController.xib */,
+				3BEF3AC5215061610090D06B /* ActivityTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,7 +117,9 @@
 		3BBF87302117013B00FD75CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3BEF3AC4215061610090D06B /* ActivityTableViewCell.swift */,
 				3BBF87312117013B00FD75CB /* SignupViewController.swift */,
+				3BEF3ABD21504BB70090D06B /* ActivityDetailViewController.swift */,
 				3B58A62F211DC59C00D42D45 /* ActivityFeedTableViewController.swift */,
 				3BBF87322117013B00FD75CB /* ViewController.swift */,
 				3B555BDE2121BB9D0009525E /* CreateEventViewController.swift */,
@@ -138,6 +152,7 @@
 		3BE177F12110FFC1003ADE49 /* SportMe */ = {
 			isa = PBXGroup;
 			children = (
+				3BEF3AC121504BD30090D06B /* Model */,
 				3B7F198D21145FEB00D999FB /* View */,
 				3BBF87302117013B00FD75CB /* Controller */,
 				3BBF872E211700BA00FD75CB /* AppDelegate.swift */,
@@ -166,6 +181,14 @@
 				3BE178172110FFC3003ADE49 /* Info.plist */,
 			);
 			path = SportMeUITests;
+			sourceTree = "<group>";
+		};
+		3BEF3AC121504BD30090D06B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF3ABB215049B90090D06B /* Activity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		865144698250E8A070A6C496 /* Pods */ = {
@@ -295,9 +318,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEF3AC021504BB70090D06B /* ActivityDetailViewController.xib in Resources */,
 				3BE178002110FFC3003ADE49 /* LaunchScreen.storyboard in Resources */,
 				3B56D72021185E0B006CD7C4 /* GoogleService-Info.plist in Resources */,
 				3BE177FD2110FFC3003ADE49 /* Assets.xcassets in Resources */,
+				3BEF3AC7215061610090D06B /* ActivityTableViewCell.xib in Resources */,
 				3BE177F82110FFC1003ADE49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,9 +414,12 @@
 				3B58A630211DC59C00D42D45 /* ActivityFeedTableViewController.swift in Sources */,
 				3BBF87332117013B00FD75CB /* SignupViewController.swift in Sources */,
 				3BBF872F211700BA00FD75CB /* AppDelegate.swift in Sources */,
+				3BEF3ABF21504BB70090D06B /* ActivityDetailViewController.swift in Sources */,
 				3BBF87342117013B00FD75CB /* ViewController.swift in Sources */,
 				3BE177FB2110FFC1003ADE49 /* SportMe.xcdatamodeld in Sources */,
 				3B555BDF2121BB9D0009525E /* CreateEventViewController.swift in Sources */,
+				3BEF3ABC215049B90090D06B /* Activity.swift in Sources */,
+				3BEF3AC6215061610090D06B /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

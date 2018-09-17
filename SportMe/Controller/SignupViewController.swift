@@ -9,11 +9,17 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 class SignupViewController: UIViewController {
     
-    //Outlets
+    //Variables
+// databaseRef = Database.database().reference(fromURL: "https://sportme-a27c2.firebaseio.com/")
+//    let userID = Auth.auth().currentUser!.uid
     
+    //Outlets
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerBtn: UIButton!
@@ -46,7 +52,9 @@ class SignupViewController: UIViewController {
                 alertActionTitle = "Try Again"
                  // This action to dismiss and re-show the signup page
                 completionHandler = { alertAction in
+                    return
                 }
+        
                
             }
             else {
@@ -58,6 +66,26 @@ class SignupViewController: UIViewController {
                     let controller = storyboard.instantiateViewController(withIdentifier: "loginSignupID")
                     self.present(controller, animated: true, completion: nil)
                 }
+                
+//                guard let result = user else {
+//                    return
+//                }
+//                let uid = result.user.uid
+//                let values = ["FirstName": self.firstName,
+//                              "LastName": self.lastName,
+//                              "Email": self.emailTextField]
+//                ref?.child("Users").child(uid).setValue(values)
+//                ref?.updateChildValues(values, withCompletionBlock: { (err, ref) in
+//                    if err != nil {
+//                        print(err!)
+//                        return
+//                    }
+//
+//                    print("Saved user successfully into Firebase")
+//                })
+
+                
+                
                 
             }
             let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)

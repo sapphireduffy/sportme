@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="ActivityTableViewCell" customModule="SportMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American Football" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3p-1i-5tp">
+                        <rect key="frame" x="16" y="11" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antrim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-bf-ox5">
+                        <rect key="frame" x="16" y="42" width="156" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17-09-2018 23:04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-3B-zSW">
+                        <rect key="frame" x="177" y="42" width="127" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127" id="K8B-5U-Dq8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z3p-1i-5tp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4EU-Jq-UK4"/>
+                    <constraint firstItem="uBn-bf-ox5" firstAttribute="top" secondItem="z3p-1i-5tp" secondAttribute="bottom" constant="10" id="G4o-zh-cWC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="z3p-1i-5tp" secondAttribute="trailing" id="Sxy-sM-ZTv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="idy-3B-zSW" secondAttribute="trailing" id="WIs-5X-lQG"/>
+                    <constraint firstItem="z3p-1i-5tp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Z0s-KM-Vpx"/>
+                    <constraint firstItem="uBn-bf-ox5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bJH-Lm-Z7C"/>
+                    <constraint firstItem="idy-3B-zSW" firstAttribute="top" secondItem="z3p-1i-5tp" secondAttribute="bottom" constant="10" id="zCv-7U-cSu"/>
+                    <constraint firstItem="idy-3B-zSW" firstAttribute="leading" secondItem="uBn-bf-ox5" secondAttribute="trailing" constant="5" id="ziu-3p-Pe0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="date" destination="idy-3B-zSW" id="4vl-7t-muM"/>
+                <outlet property="location" destination="uBn-bf-ox5" id="rpG-rf-bvs"/>
+                <outlet property="name" destination="z3p-1i-5tp" id="ltH-BQ-Tte"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="53.5"/>
+        </tableViewCell>
+    </objects>
+</document>

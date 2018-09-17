@@ -14,64 +14,47 @@ var databaseHandle:DatabaseHandle?
 
 class ActivityFeedTableViewController: UITableViewController {
     
-    var activityType = [String]()
+    var activityType = [Activity]()
     var myIndex = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-      //  tableView.delegate = self
+        self.tableView.register(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         
         ref = Database.database().reference()
-        
-        databaseHandle = ref?.child("Activities").observe(.value, with: {(snapshot) in
+        databaseHandle = ref?.child("Activities").observe(.value, with: { (snapshot) in
     
-        if let result = snapshot.children.allObjects as? [DataSnapshot] {
-            
-            for child in result {
-                
-                let activityID = child.key as String //get autoID
-        
-        //Retrieve the posts and listen for changes - Observe Activities and Child Added
-        databaseHandle = ref?.child("Activities/\(activityID)/Activity").observe(.value, with: { (snapshot) in
-            
-
-                    
-            //Code to execure child is added in table
-            //Take Value from the snapshot and add it to the post data array
-            //Try to convert the  value of the data to a string
-            let activity = snapshot.value as? String
-            
-            if let actualActivity = activity {
-                //Append Data to our activityType Array
-                self.activityType.append(actualActivity)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    
+            if let activities = snapshot.children.allObjects as? [DataSnapshot] {
+                self.activityType.removeAll()
+                for activity in activities {
+                    let id = activity.key
+                    databaseHandle = ref?.child("Activities/\(id)").observe(.value, with: { (snapshot) in
+                        guard let activityName = snapshot.childSnapshot(forPath: "Activity").value as? String ,
+                            let activityDate = self.formatDateOfActivity(date: snapshot.childSnapshot(forPath: "Date").value as! String),
+                            let activityLocation =  snapshot.childSnapshot(forPath: "Location").value as? String,
+                            let activityUser = snapshot.childSnapshot(forPath: "User").value as? String else {
+                                preconditionFailure("Invalid activity")
+                        }
+                        
+                        self.activityType.append(Activity(name: activityName, date: activityDate, location: activityLocation, user: activityUser))
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                            
+                        }
+                    })
                 }
-            }
-                })
-            }
             }
         })
     }
-        //fetchResultFromFirebase()
-                    
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        //Retrieve posts and listen for changes
-
-                    
-                    
-                    
- //   func fetchResultFromFirebase() {
-        //Set Firebase Reference
+    
+    func formatDateOfActivity(date: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        return dateFormatter.date(from: date)
+    }
+    
     
     @IBAction func addEvent(_ sender: UIBarButtonItem) {
     self.performSegue(withIdentifier: "goToAddEvent", sender: self)
@@ -96,18 +79,24 @@ class ActivityFeedTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-
-        // Configure the cell...
-        cell.textLabel?.text = activityType[indexPath.row]
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
+        cell.name.text = activityType[indexPath.row].name
+        cell.location.text = activityType[indexPath.row].location
+        cell.date.text = "17-09-2018 23:04"
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "showActivity", sender: self)
-        
+        let selectedActivity  = self.activityType[indexPath.row]
+        let activityInfoView = ActivityDetailViewController(nibName: "ActivityDetailViewController", bundle: nil, activity: selectedActivity)
+        self.navigationController?.pushViewController(activityInfoView, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
 
 

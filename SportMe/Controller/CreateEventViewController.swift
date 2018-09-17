@@ -37,29 +37,35 @@ class CreateEventViewController: UIViewController {
     }
     
     @IBAction func addActivity(_ sender: Any) {
-        
+
         guard let currentUserEmail = Auth.auth().currentUser?.email,
             let activityType = self.activityType.text,
             let locationType = self.locationType.text,
             let date = self.formatDateOfActivity() else {
             preconditionFailure("No current user")
         }
-        
+
         let activitiesDB = Database.database().reference().child("Activities")
         let activitiesDictionary : Dictionary<String, Any> = ["User" : currentUserEmail,
                                                              "Activity" : activityType,
                                                              "Location" : locationType,
                                                              "Date" : date]
-        
+
         activitiesDB.childByAutoId().setValue(activitiesDictionary) {
             (error, ref) in
             if error != nil {
-                print(error!)
+                let alert = UIAlertController(title: "Whoops!", message: "Something went wrong, try again", preferredStyle: UIAlertControllerStyle.alert)
+                self.present(alert, animated: false, completion: {
+                    print(error!)
+                })
             }
             else {
                 print("Message saved successfully!")
+                //Dismiss view
+                self.dismiss(animated: true) {
+                    print("Dismissed successfully after saving")
+                }
             }
-            self.performSegue(withIdentifier: "goToActivityFeed", sender: self)
         }
         
     }
@@ -71,6 +77,11 @@ class CreateEventViewController: UIViewController {
     }
     
     
+    @IBAction func didCancel(_ sender: Any) {
+        self.dismiss(animated: true) {
+            print("Dismissed - did not save")
+        }
+    }
     /*
      // MARK: - Navigation
      
