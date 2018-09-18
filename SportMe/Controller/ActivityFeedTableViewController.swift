@@ -54,8 +54,13 @@ class ActivityFeedTableViewController: UITableViewController {
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         return dateFormatter.date(from: date)
     }
-    
-    
+  
+    func formatDateOfActivity(date: Date) -> String {
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "MMM d, h:mm"
+      return dateFormatter.string(from: date)
+    }
+  
     @IBAction func addEvent(_ sender: UIBarButtonItem) {
     self.performSegue(withIdentifier: "goToAddEvent", sender: self)
     }
@@ -83,7 +88,7 @@ class ActivityFeedTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
         cell.name.text = activityType[indexPath.row].name
         cell.location.text = activityType[indexPath.row].location
-        cell.date.text = "17-09-2018 23:04"
+        cell.date.text = self.formatDateOfActivity(date: activityType[indexPath.row].date)
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -92,6 +97,8 @@ class ActivityFeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedActivity  = self.activityType[indexPath.row]
         let activityInfoView = ActivityDetailViewController(nibName: "ActivityDetailViewController", bundle: nil, activity: selectedActivity)
+      
+        activityInfoView.title = "\(selectedActivity.name.capitalized)"
         self.navigationController?.pushViewController(activityInfoView, animated: true)
     }
     

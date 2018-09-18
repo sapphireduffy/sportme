@@ -27,16 +27,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antrim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-bf-ox5">
-                        <rect key="frame" x="16" y="42" width="156" height="18"/>
+                        <rect key="frame" x="16" y="42" width="45.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17-09-2018 23:04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-3B-zSW">
-                        <rect key="frame" x="177" y="42" width="127" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127" id="K8B-5U-Dq8"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 18, 3:26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-3B-zSW">
+                        <rect key="frame" x="218" y="42" width="86" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,13 +41,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="z3p-1i-5tp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4EU-Jq-UK4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="idy-3B-zSW" secondAttribute="bottom" constant="4" id="9wE-Dl-Poy"/>
                     <constraint firstItem="uBn-bf-ox5" firstAttribute="top" secondItem="z3p-1i-5tp" secondAttribute="bottom" constant="10" id="G4o-zh-cWC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="z3p-1i-5tp" secondAttribute="trailing" id="Sxy-sM-ZTv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="idy-3B-zSW" secondAttribute="trailing" id="WIs-5X-lQG"/>
                     <constraint firstItem="z3p-1i-5tp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Z0s-KM-Vpx"/>
                     <constraint firstItem="uBn-bf-ox5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bJH-Lm-Z7C"/>
-                    <constraint firstItem="idy-3B-zSW" firstAttribute="top" secondItem="z3p-1i-5tp" secondAttribute="bottom" constant="10" id="zCv-7U-cSu"/>
-                    <constraint firstItem="idy-3B-zSW" firstAttribute="leading" secondItem="uBn-bf-ox5" secondAttribute="trailing" constant="5" id="ziu-3p-Pe0"/>
+                    <constraint firstItem="idy-3B-zSW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fKi-I8-odo"/>
+                    <constraint firstItem="idy-3B-zSW" firstAttribute="centerY" secondItem="uBn-bf-ox5" secondAttribute="centerY" id="ud4-cG-dCw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

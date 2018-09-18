@@ -204,13 +204,17 @@
                             <outlet property="delegate" destination="wzY-G8-F4a" id="g6M-FG-wI0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sport Activities" id="vYg-qV-fug">
+                    <navigationItem key="navigationItem" title="Sport Activities" largeTitleDisplayMode="always" id="vYg-qV-fug">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fXo-uG-cYg"/>
                         <barButtonItem key="rightBarButtonItem" title="Add" image="createEvent" id="RkL-Kd-0vN">
                             <connections>
                                 <segue destination="cuP-GW-TDM" kind="presentation" id="ccl-Ue-eEY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8kW-Aj-GhU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6u-GG-Qdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
