@@ -27,12 +27,17 @@ class ActivityDetailViewController: UIViewController {
       geo.geocodeAddressString(activity.location) { (placemarks, error) in
         if error == nil {
           if let placemark = placemarks?[0] {
+            
             let location = placemark.location!
             var mapRegion = MKCoordinateRegion()
+            let annotation = MKPointAnnotation()
             var coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             mapRegion.center = coordinate
-            mapRegion.span.latitudeDelta = 0.2
-            mapRegion.span.longitudeDelta = 0.2
+            mapRegion.span.latitudeDelta = 0.1
+            mapRegion.span.longitudeDelta = 0.1
+            annotation.coordinate = coordinate
+            annotation.title = self.activity.name
+            self.activityMap.addAnnotation(annotation)
             self.activityMap.setRegion(mapRegion, animated: true)
             return
           }
